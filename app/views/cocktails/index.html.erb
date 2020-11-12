@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>List of Cocktails</h1>
+  <table class="table-sm">
+     <thead>
+      <tr>
+        <th>Name</th>
+        <th colspan="4" ></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @cocktails.each do |cocktail| %>
+        <tr>
+          <td><%= cocktail.name.capitalize %></td>
+          <td><%= link_to 'Show', cocktail_path(cocktail) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  </br>
+   <%= link_to 'Add a New Cocktail', new_cocktail_path %>
+</div>
