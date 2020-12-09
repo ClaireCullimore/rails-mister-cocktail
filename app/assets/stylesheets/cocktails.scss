@@ -1,11 +1,20 @@
 .home-banner {
   background-image: url('https://images.unsplash.com/photo-1595751866713-71018185a7ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2808&q=80');
   background-size: cover;
+  object-fit: cover;
   height: 100vh;
   color: #eee;
   text-align: center;
-  padding-top: 40vh;
-  background-position: cover;
+  padding-top: 23vh;
+  font-family: 'Asap', sans-serif;
+
+  h1 {
+    font-family: 'Asap', sans-serif;
+    color: #e9eeee;
+    font-size: 65px;
+    font-weight: bold;
+    padding-bottom: 50px;
+  }
 }
 
 @media (min-width: 480px) {

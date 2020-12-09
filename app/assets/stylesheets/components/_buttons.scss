@@ -1,0 +1,12 @@
+.btn {
+  border: 2px solid #e9eeee;
+  color: #e9eeee;
+  font-size: 30px;
+
+
+  &:hover {
+    background-color: #ff0000;
+    transition: 0.4s;
+    color: #e9eeee;
+  }
+}
