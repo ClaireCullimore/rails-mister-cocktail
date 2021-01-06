@@ -1,28 +1,28 @@
 <head>
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Asap&display=swap" rel="stylesheet">
 </head>
 
 <div class="home-banner">
   <h1>The Cocktail Shop</h1>
-  <h2>Refresh your glass below or <%= link_to 'Add a new cocktail', new_cocktail_path, class: "btn" %></h2>
+  <h2>Choose a cocktail or <%= link_to 'Add a new cocktail', new_cocktail_path, class: "btn" %></h2>
 </div>
-
-<div class="container">
-  <div class="cards-grid">
-    <% @cocktails.each do |cocktail| %>
-      <%= link_to cocktail_path(cocktail) do %>
-    <div class="card">
-      <% if cocktail.photo.attached? %>
-      <%= cl_image_tag cocktail.photo.key %>
-      <% else %>
-        <img class="img" src="https://images.unsplash.com/photo-1578664182354-e3878189cdac?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="cocktail">
+<div class="middle-body">
+  <div class="container">
+    <div class="cards-grid">
+      <% @cocktails.each do |cocktail| %>
+        <%= link_to cocktail_path(cocktail) do %>
+      <div class="card">
+        <% if cocktail.photo.attached? %>
+        <%= cl_image_tag cocktail.photo.key %>
+        <% else %>
+          <img src="https://images.unsplash.com/photo-1578664182354-e3878189cdac?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="cocktail">
+        <% end %>
+            <p><%= cocktail.name %></p>
+          </div>
+        <% end %>
       <% end %>
-          <p><%= cocktail.name %></p>
-        </div>
-      <% end %>
-    <% end %>
-    </div>
+      </div>
+  </div>
 </div>
 
  <div class="footer">
