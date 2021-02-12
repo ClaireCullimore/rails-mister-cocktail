@@ -1,3 +1,6 @@
+Cocktail.create(name: "Moscule Mule")
+Cocktail.create(name: "Cosmopolitan")
+
 Ingredient.create(name: "rum")
 Ingredient.create(name: "vodka")
 Ingredient.create(name: "gin")
