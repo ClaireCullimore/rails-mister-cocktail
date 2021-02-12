@@ -7,11 +7,11 @@
     <div class="cards-grid">
       <% @cocktails.each do |cocktail| %>
         <%= link_to cocktail_path(cocktail) do %>
-          <div class="card">
             <% if cocktail.photo.attached? %>
+            <div class="card">
               <%= cl_image_tag cocktail.photo.key %>
             <% else %>
-              <img src= "" alt="cocktail">
+              <img src= "https://images.unsplash.com/photo-1556881261-e41e8db21055?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="cocktail">
             <% end %>
             <p><%= cocktail.name %></p>
           </div>
@@ -20,3 +20,4 @@
       </div>
   </div>
 </div>
+
