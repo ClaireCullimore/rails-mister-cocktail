@@ -1,0 +1,23 @@
+.footer {
+  background-color: #ea5611;
+  color: #f1e0d0;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  font-size: 15px;
+}
+
+.footer-links {
+  justify-content: left;
+  margin-left: 20px;
+  font-size: 20px;
+
+  .fab {
+    color: #f1e0d0
+  }
+
+}
+
+.footer-copyright {
+  margin: auto;
+}

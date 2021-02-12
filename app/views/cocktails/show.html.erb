@@ -1,15 +1,25 @@
-<div class="container">
-  <h1><%= @cocktail.name %></h1>
-  <% if @cocktail.photo.attached?%>
-    <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
-  <% end %>
-  <% @cocktail.doses.each do |dose|%>
-    <p><%= dose.description %> of <%= dose.ingredient.name%> -
-    <%=link_to dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
-      <i class="far fa-trash-alt"></i> </p>
-    <% end %>
-  <% end %>
-</br>
-  <%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
-  <%= link_to 'Homepage', cocktails_path, class: "btn btn-primary" %>
+<div class="container" style="width: 900px; height: 100vh; background-color: #fdce92; padding: 30px">
+  <h1 style="text-align: center;"><%= @cocktail.name %></h1>
+    <div class="second-container"; style="padding-top: 30px";>
+      <div style="width: 400px; height: 450px">
+        <% if @cocktail.photo.attached?%>
+          <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+        <% end %>
+      </div>
+      <div class="rightside">
+        <h2>Ingredients</h2>
+        <% @cocktail.doses.each do |dose|%>
+          <p><%= dose.description %> of <%= dose.ingredient.name%> -
+          <%=link_to dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
+            <i class="far fa-trash-alt" style="color: #ea5611"></i> </p>
+          <% end %>
+        <% end %>
+      </br>
+      <div class="right-bottom">
+        <%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail), class: "btn" %>
+      </br>
+        <%= link_to 'Homepage', cocktails_path, class: "btn-small" %>
+      </div>
+    </div>
+  </div>
 </div>

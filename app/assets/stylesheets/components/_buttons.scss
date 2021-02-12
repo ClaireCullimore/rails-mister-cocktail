@@ -1,12 +1,46 @@
-.btn {
-  border: 2px solid #e9eeee;
-  color: #e9eeee;
+.index-btn {
+  border: 2px solid #f1e0d0;
+  color: #f1e0d0;
   font-size: 30px;
+  padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  &:hover {
+    background-color: #ea5611;
+    transition: 0.4s;
+    color: #f1e0d0;
+    text-decoration: none;
+  }
+}
+
+.btn {
+  border: 2px solid #ea5611;
+  color: #ea5611;
+  font-size: 30px;
+  padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  &:hover {
+    background-color: #ea5611;
+    transition: 0.4s;
+    color: #e9eeee;
+  }
+}
+
+.btn-small {
+  border: 2px solid #ea5611;
+  color: #ea5611;
+  font-size: 20px;
+  padding: 5px;
+  text-decoration: none;
 
 
   &:hover {
-    background-color: #fdce92;
+    background-color: #ea5611;
     transition: 0.4s;
-    color: #e9eeee;
+    color: #f1e0d0;
+    text-decoration: none;
   }
 }
