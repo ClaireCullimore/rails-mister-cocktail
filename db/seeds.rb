@@ -1,15 +1,20 @@
-Cocktail.create(name: "Moscule Mule")
-Cocktail.create(name: "Cosmopolitan")
+# Cocktail.create(name: "Moscule Mule")
+# Cocktail.create(name: "Cosmopolitan")
 
-Ingredient.create(name: "rum")
-Ingredient.create(name: "vodka")
-Ingredient.create(name: "gin")
-Ingredient.create(name: "slice of lime")
-Ingredient.create(name: "tonic")
-Ingredient.create(name: "mint leaves")
-Ingredient.create(name: "soda water")
-Ingredient.create(name: "sugar")
-Ingredient.create(name: "cranberry juice")
-Ingredient.create(name: "cointreau")
-Ingredient.create(name: "ginger beer")
-Ingredient.create(name: "lime juice")
+# Ingredient.create(name: "rum")
+# Ingredient.create(name: "vodka")
+
+require 'json'
+require 'open-uri'
+
+url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+data = open(url).read
+ingredients = JSON.parse(data)['drinks']
+
+puts 'start'
+
+ingredients.each do |i|
+  Ingredient.create!(name: i['strIngredient1'])
+end
+
+puts 'end'
